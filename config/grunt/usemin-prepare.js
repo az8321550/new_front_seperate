@@ -15,5 +15,5 @@ module.exports = {
     }
   },
   // Entrance files to find usemin block
-  html: '<%=yo.app%>/views/**/*.jade'
+  html: '<%=yo.app%>/views/**/*.html'
 };

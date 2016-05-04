@@ -1,0 +1,49 @@
+{% extends '../layout/layout.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="/static/styles/help.css"/>
+{% endblock %}
+
+{% block body %}
+<ul class="menu">
+  <li>
+    <div class="menu-main">新手指南<i class="active"></i></div>
+    <ul class="menu-sub">
+      <li><a href="/help/step">购物流程<i></i></a></li>
+      <li><a href="/help/pay">支付方式<i></i></a></li>
+      <li><a href="/help/express">配送方式<i></i></a></li>
+      <li><a href="/help/issue">常见问题<i></i></a></li>
+    </ul>
+  </li>
+  <li>
+    <div class="menu-main">用户中心<i class="active"></i></div>
+    <ul class="menu-sub">
+      <li><a href="/help/credits">积分说明<i></i></a></li>
+      <li><a href="/help/coupon">优惠券指引<i></i></a></li>
+      <li><a href="/help/identity">身份证说明<i></i></a></li>
+    </ul>
+  </li>
+  <li>
+    <div class="menu-main">购物保障<i class="active"></i></div>
+    <ul class="menu-sub">
+      <li><a href="/help/real">正品保障<i></i></a></li>
+      <li><a href="/help/custom">清关&税费<i></i></a></li>
+      <li><a href="/help/service">服务声明<i></i></a></li>
+      <li><a href="/help/feature">特色服务<i></i></a></li>
+    </ul>
+  </li>
+  <li>
+    <div class="menu-main">售后服务<i class="active"></i></div>
+    <ul class="menu-sub">
+      <li><a href="/help/return">退货服务政策<i></i></a></li>
+      <li><a href="/help/transport">物流说明<i></i></a></li>
+    </ul>
+  </li>
+  <li><a href="/help/size" class="menu-main">尺码助手<i></i></a></li>
+</ul>
+<!--build:js(.tmp) /static/scripts/help.js-->
+<script src="/static/plugin/zepto/zepto.js"></script>
+<script src="/static/scripts/help.js"></script>
+<!--endbuild-->
+{% endblock %}
+

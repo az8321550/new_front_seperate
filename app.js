@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes/routes');
 var ms=require("ms");
+var nunjucks=require("nunjucks");
 var compression = require('compression')
 var config=require("./config/config");
 
@@ -12,8 +13,12 @@ var config=require("./config/config");
 var app = express();
 var dir=app.get('env')=="production"?"dist":"app";
 
-app.set("views", __dirname + "/"+dir+"/views");
-app.set('view engine', 'swig');
+app.set('view engine', 'html');
+nunjucks.configure(__dirname + "/"+dir+"/views", {
+  autoescape: true,
+  express: app,
+  watch: true
+});
 
 app.use(compression());
 app.use(bodyParser.json());

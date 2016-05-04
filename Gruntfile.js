@@ -37,7 +37,7 @@ module.exports = function (grunt) {
 
     concurrent: require('./config/grunt/concurrent'),
 
-    htmlmin: require('./config/grunt/htmlmin'),
+    htmlclean: require('./config/grunt/htmlclean'),
 
     browserSync: require('./config/grunt/browserSync')
   };
@@ -57,7 +57,7 @@ module.exports = function (grunt) {
     'filerev',
     'copy:html',
     'usemin',
-    'htmlmin',
+    'htmlclean',
     'concurrent:clean'
   ]);
 
